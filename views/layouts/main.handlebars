@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Shop</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-screen h-screen flex flex-col overflow-clip">
+    <header class="w-full py-1 px-4 bg-teal-400">
+        <nav class="flex justify-between">
+            <a class="color-white" href="/">Home</a>
+            <a class="color-white" href="/login">Login</a>
+        </nav>
+    </header>
+
+    <div class="w-full flex flex-col align-center items-center grow bg-teal-100 gap-4">
+        <div class="w-full h-42 text-center py-4 flex flex-col justify-evenly items-center banner bg-teal-600 gap-1">
+            <p class="text-white text-2xl font-bold">Ready to Move?</p>
+            <p class="text-white text-md">Find you next home in our extensive database of properties for sale and rent.</p>
+            <button class="text-white bg-pink-500 w-fit py-2 px-8 rounded-sm text-sm cursor-pointer">Learn more about us</button>
+        </div>
+
+        <div class="w-full flex grow justify-center items-center gap-4">
+            {{{body}}}
+        </div>
+
+        <footer class="w-full justify-items-center bg-teal-200 py-1.5 px-4">
+            <p class="">&copy; (Olioni Taumoepeau) - 2025 Real Estate Listings. All rights reserved.</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>

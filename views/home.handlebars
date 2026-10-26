@@ -1,0 +1,14 @@
+<div class="w-40 self-stretch bg-gray-700 rounded-2xl"></div>
+
+<div class="w-4/6 grid gap-2 grid-cols-7 content-start">
+    {{#each properties}}
+    <div class="flex flex-col bg-gray-700 overflow-hidden">
+        <p class="text-white text-sm text-center truncate px-1 py-0.5" title="{{ address }}">{{ address }}</p>
+        <img src="/houses/{{ image_name }}" alt="{{ address }}" loading="lazy"
+             class="w-full h-28 object-cover">
+        <p class="text-white text-sm text-center py-0.5">${{ list_price }}</p>
+    </div>
+    {{else}}
+    <p>No properties found.</p>
+    {{/each}}
+</div>
