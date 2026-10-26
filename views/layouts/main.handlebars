@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Plant Shop</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <title>Real Estate Listings</title>
+    <link rel="stylesheet" href="/css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="w-screen h-screen flex flex-col overflow-clip">
     <header class="w-full py-1 px-4 bg-teal-400">
         <nav class="flex justify-between">
-            <a class="color-white" href="/">Home</a>
-            <a class="color-white" href="/login">Login</a>
+            <a class="text-white" href="/">Home</a>
+            <span class="flex gap-2">
+                <a class="text-white" href="/register">Register</a>
+                <a class="text-white" href="/login">Login</a>
+            </span>
         </nav>
     </header>
 
@@ -21,7 +24,7 @@
             <button class="text-white bg-pink-500 w-fit py-2 px-8 rounded-sm text-sm cursor-pointer">Learn more about us</button>
         </div>
 
-        <div class="w-full flex grow justify-center items-center gap-4">
+        <div class="w-full flex grow justify-center items-start gap-4">
             {{{body}}}
         </div>
 

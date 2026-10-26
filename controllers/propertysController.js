@@ -2,8 +2,8 @@ const Property = require("../models/property.js")
 
 async function listProperties(req, res) {
     try {
-        const { type } = req.query
-        const where = type ? { type } : {}
+        const { suburb } = req.query
+        const where = suburb ? { suburb } : {}
 
         const properties = await Property.findAll({ where, limit: 21, raw: true})
 

@@ -1,12 +1,22 @@
-<div class="w-40 self-stretch bg-gray-700 rounded-2xl"></div>
+<div class="w-48 self-stretch bg-gray-400 rounded-t-2xl">
+    <p class="text-white font-bold text-center py-1">Locations</p>
+    <ul>
+        {{#each suburbs}}
+            <li class="bg-white pl-4 cursor-pointer text-gray-600 py-1 border-b-1 border-gray-300">
+                <a href="/properties?suburb={{this.name}}">
+                    <p>{{this.name}}</p>
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+</div>
 
-<div class="w-4/6 grid gap-2 grid-cols-7 content-start">
+<div class="w-4/6 h-full grid gap-2 grid-cols-7 grid-rows-3 content-start">
     {{#each properties}}
-    <div class="flex flex-col bg-gray-700 overflow-hidden">
-        <p class="text-white text-sm text-center truncate px-1 py-0.5" title="{{ address }}">{{ address }}</p>
-        <img src="/houses/{{ image_name }}" alt="{{ address }}" loading="lazy"
-             class="w-full h-28 object-cover">
-        <p class="text-white text-sm text-center py-0.5">${{ list_price }}</p>
+    <div class="h-full flex flex-col items-center bg-gray-700 rounded-md overflow-hidden">
+        <p class="text-white text-sm text-center truncate py-2" title="{{ address }}">{{ address }}</p>
+        <img src="/houses/{{ image_name }}" alt="{{ address }}" loading="lazy" class="w-full h-full object-cover">
+        <p class="text-white font-bold text-sm text-center py-2">${{ list_price }}</p>
     </div>
     {{else}}
     <p>No properties found.</p>
